@@ -1,0 +1,50 @@
+{ "name": "Mocha",
+  "scopeName": "source.nodejs_mocha",
+  "fileTypes": [".js"],
+  "patterns": [
+  {
+    "include": "source.js"
+  },
+  {
+    "name": "entity.section",
+    "begin": "(describe)\\(\"([^\"]+)\",\\s*function\\(\\)\\s*{",
+    "beginCaptures": {
+      "1": { "name": "storage.function" }
+    },
+    "patterns": [
+      { "include": "$self" },
+      {
+        "name": "entity.section",
+        "begin": "(it)\\(\"([^\"]+)\",\\s*function\\((done)?\\)\\s*{",
+        "beginCaptures": {
+          "1": { "name": "support.function" },
+          "3": { "name": "keyword.control"}
+        },
+        "patterns": [
+          { "include": "source.js" },
+          { 
+            "name": "entity.tag",
+            "match": "(done)\\([^\\)]*\\)",
+            "captures": { "1": { "name": "keyword.control" } }
+          }
+        ],
+        "end": "}\\);"
+      },
+      {
+        "name": "entity.tag",
+        "begin": "(beforeEach)\\(function\\((done)?\\)\\s*{",
+        "beginCaptures": {
+          "1": { "name": "support.function" },
+          "2": { "name": "keyword.control" }
+        },
+        "patterns": [
+          { "include": "source.js" }
+        ],
+        "end": "}\\);"
+      }
+    ],
+    "end": "}\\);"
+  }
+  ],
+  "uuid": "82997f2b-0c9a-45f8-b46e-b3f3ed147fe7"
+}

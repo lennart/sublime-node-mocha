@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+it("should ${1:behave like}", function(done){
+  ${2:// Add your behavior testing code here}
+  // Make sure you call done() when finished
+  done();
+});
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ait</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.nodejs_mocha</scope>
+  <description>Asynchronous it-Block</description>
+</snippet>

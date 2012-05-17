@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+before(function(){
+  ${1:// Add your test setup here}
+});
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>before</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.nodejs_mocha</scope>
+</snippet>

@@ -1,0 +1,7 @@
+{
+  "url": "https://github.com/lennart/sublime-node-mocha",
+  "version": "1.0.0",
+  "description": "Sublime Text 2 Syntax highlighter and Snippets for node.js mocha tests",
+  "author": "Lennart Melzer",
+  "homepage": "https://github.com/lennart/sublime-node-mocha"
+}

@@ -12,8 +12,8 @@ class MochaDetectFileTypeCommand(sublime_plugin.EventListener):
       return
 
     name = os.path.basename(filename.lower())
-    dirname = os.path.dirname(filename.lower())
-    if dirname[-4:] == "test":
+    dirname = os.path.dirname(filename.lower()).rpartition('/')[2]
+    if dirname[:4] == "test":
       set_syntax(view, "Mocha", "Mocha")
 
 
